@@ -63,8 +63,7 @@ function Get-AzPassword {
 }
 
 function Generate-AzPassword {
-    $CharSet = ('0123456789{]+-[*=@:)}$^%;(_!&#?>/|').ToCharArray() 
-    $RandSymbol = (Get-Random -InputObject $CharSet -Count 5) -Join ''
-    $words = [System.IO.file]::ReadAllLines('wordlist.txt') 
-    return ($words |  Get-Random -Count 3) + $RandSymbol -Join ''
+    $simplePass = Invoke-WebRequest -Method 'GET' -Uri $uri -UseBasicParsing
+    $pwd = (Get-Culture).TextInfo.ToTitleCase($simplePass.Content)
+    return $pwd + $RandSymbol -Join ''
 }
