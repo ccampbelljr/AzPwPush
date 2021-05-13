@@ -63,6 +63,7 @@ function Get-AzPassword {
 }
 
 function Generate-AzPassword {
+    $uri = 'https://www.dinopass.com/password/simple'
     $simplePass = Invoke-WebRequest -Method 'GET' -Uri $uri -UseBasicParsing
     $pwd = (Get-Culture).TextInfo.ToTitleCase($simplePass.Content)
     return $pwd + $RandSymbol -Join ''
