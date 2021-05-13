@@ -128,7 +128,6 @@ $($Logo)
     Use the Create button below to generate a new URL with the current password field.<br>
     A blank password will result in a randomly generated password.<br>
     A Maximum Number of Views of 0 will allow infinite views (until $($ENV:MaximumPasswordAge) days from creation has expired).<br>
-     or use the Generate button to create a new password<br>
     <input class="button" name="Submit" type="submit" value="Create">
   </form>
 </div>
