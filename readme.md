@@ -6,7 +6,7 @@ It's possible to use both generated passwords, or self-entered passwords.
 
 ## How it works
 
-When deploying this function to Azure, the function will has 2 URLS
+When deploying this function to Azure, the function will have 2 URLS
 
 /Create - Creates a unique password and URL. Can either type in a password and it will create a URL, or click Create button and it will generate one using the SimplePass API plus 2 extra random characters
 
